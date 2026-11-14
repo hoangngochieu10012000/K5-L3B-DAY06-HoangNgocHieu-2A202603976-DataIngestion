@@ -9,13 +9,15 @@
 ## Dữ liệu và pipeline
 - **Chủ đề, nguồn/quyền, số trang và quy tắc tính trang:**
   - *Chủ đề:* Tài liệu đào tạo kỹ thuật chuyên sâu về Retrieval-Augmented Generation (RAG) và LangChain Framework của AI VIET NAM (AIO2025).
-  - *Nguồn & quyền:* File `data/AIO2025_Tutorial_RAG.pdf` (phiên bản AIO2025-v1.0), được cung cấp trong khuôn khổ chương trình học AI VIET NAM, sử dụng hợp lệ cho mục đích nghiên cứu và thực hành kỹ thuật cá nhân.
+  - *Nguồn & quyền:* File `data\AIO2025_Tutorial_RAG.pdf` (phiên bản AIO2025-v1.0), được cung cấp trong khuôn khổ chương trình học AI VIET NAM, sử dụng hợp lệ cho mục đích nghiên cứu và thực hành kỹ thuật cá nhân.
   - *Số trang:* Tổng cộng 35 trang vật lý.
-  - *Quy tắc tính trang:* Loại bỏ trang 2 (Mục lục - Table of Contents), trang 20 (code stub cụt dưới 100 ký tự không mang nội dung độc lập), và trang 35 (Phụ lục chứa liên kết tải code tham khảo bên ngoài). Tổng số trang nội dung hữu ích được đưa vào pipeline là **32 trang** (đạt và vượt yêu cầu tối thiểu 30 trang), với dung lượng văn bản từ 772 đến 2.191 ký tự/trang, tổng cộng 52.520 ký tự thô. Toàn bộ thông tin được ghi nhận chi tiết tại [data/manifest.json](file:///d:/AI20K/Lab06/K5-L3B-DAY06-HoangNgocHieu-2A202603976-DataIngestion/data/manifest.json).
+  - *Quy tắc tính trang:* Loại bỏ trang 2 (Mục lục - Table of Contents), trang 20 (code stub cụt dưới 100 ký tự không mang nội dung độc lập), và trang 35 (Phụ lục chứa liên kết tải code tham khảo bên ngoài). Tổng số trang nội dung hữu ích được đưa vào pipeline là **32 trang** (đạt và vượt yêu cầu tối thiểu 30 trang), với dung lượng văn bản từ 772 đến 2.191 ký tự/trang, tổng cộng 52.520 ký tự thô.
+  - *Manifest dữ liệu:* [Lab06\K5-L3B-DAY06-HoangNgocHieu-2A202603976-DataIngestion\data\manifest.json](../../data/manifest.json).
 
 - **Chuẩn hóa, lỗi và giới hạn:**
   - *Chuẩn hóa Unicode & ký tự:* Chuẩn hóa toàn bộ văn bản về dạng Unicode NFC (`unicodedata.normalize('NFC', text)`), thay thế các khoảng trắng không ngắt (`\u00a0`) và ký tự tab (`\t`) bằng khoảng trắng tiêu chuẩn.
   - *Làm sạch cấu trúc:* Loại bỏ các dòng running header lặp lại qua các trang (`AI VIET NAM (AIO2025) aivietnam.edu.vn`, `AI VIET NAM – AI COURSE 2025`), loại bỏ các số trang đơn lẻ ở chân trang footer (`\d{1,3}`), thu gọn các dòng trống liên tiếp về tối đa 2 dòng mới (`\n\n`) để bảo toàn cấu trúc phân đoạn và thụt đầu dòng của code block.
+  - *Mã nguồn đọc và chuẩn hóa:* [Lab06\K5-L3B-DAY06-HoangNgocHieu-2A202603976-DataIngestion\starter\src\ingestion.py](../../starter/src/ingestion.py).
   - *Lỗi và giới hạn:* Một số sơ đồ kiến trúc phức tạp trong PDF được biểu diễn dưới dạng hình ảnh hoặc text phân mảnh; pipeline xử lý trích xuất văn bản thuần qua `pypdf`, không dùng OCR ngoài nên chỉ tập trung vào văn bản có thể trích xuất trực tiếp.
 
 - **Embedding model/provider/version/số chiều, vector store/version, metric, lệnh chạy và chi phí:**
@@ -24,17 +26,20 @@
   - *Instruction prefixes tuân thủ chuẩn của Google:*
     - Document chunks: `title: none | text: {content}`
     - Query benchmark: `task: question answering | query: {question}`
-  - *Vector store:* Qdrant Embedded Local (`qdrant-client==1.20.0`), lưu trữ bền vững tại thư mục `starter/results/qdrant_db/`, không phụ thuộc Docker daemon.
+  - *Mã nguồn Embedding:* [Lab06\K5-L3B-DAY06-HoangNgocHieu-2A202603976-DataIngestion\starter\src\embeddings.py](../../starter/src/embeddings.py).
+  - *Vector store:* Qdrant Embedded Local (`qdrant-client==1.20.0`), lưu trữ bền vững tại thư mục `starter\results\qdrant_db\`, không phụ thuộc Docker daemon.
+  - *Mã nguồn Vector Store:* [Lab06\K5-L3B-DAY06-HoangNgocHieu-2A202603976-DataIngestion\starter\src\store.py](../../starter/src/store.py).
   - *Metric:* Cosine Similarity (`Distance.COSINE`).
   - *Lệnh chạy:*
     ```bash
     cd starter
     python -m src.run
     ```
+  - *Mã nguồn điều phối (Pipeline Orchestrator):* [Lab06\K5-L3B-DAY06-HoangNgocHieu-2A202603976-DataIngestion\starter\src\run.py](../../starter/src/run.py).
   - *Chi phí:* **$0.00** (Chạy offline hoàn toàn trên GPU cục bộ NVIDIA GeForce RTX 4060 Laptop GPU qua PyTorch CUDA).
 
 - **Metadata bắt buộc, trường lọc bổ sung, nguồn giá trị và lý do chọn:**
-  - *Metadata bắt buộc:* `document_id` (`aio2025-tutorial-rag`), `source` (`data/AIO2025_Tutorial_RAG.pdf`), `page` (số trang vật lý từ 1 đến 34).
+  - *Metadata bắt buộc:* `document_id` (`aio2025-tutorial-rag`), `source` (`data\AIO2025_Tutorial_RAG.pdf`), `page` (số trang vật lý từ 1 đến 34).
   - *Trường lọc bổ sung:* `section` (dạng string Enum phân loại chủ đề chương mục).
   - *Nguồn giá trị & lý do chọn:* Giá trị `section` được ánh xạ trực tiếp từ cấu trúc chương mục của tài liệu:
     - `dan_nhap`: Trang 1 (Dẫn nhập bài học)
@@ -55,11 +60,13 @@
   - *Chiến lược B (Structure/Paragraph-aware Chunking):* Phân đoạn văn bản dựa trên ranh giới đoạn văn (`\n\n`) và câu kết thúc (`. `, `! `, `? `), gom các đoạn thành chunk có kích thước tối đa 700 ký tự. Gắn cùng bộ metadata, truy xuất không lọc.
   - *Chiến lược C (Structure/Paragraph-aware + Metadata Filter):* Dùng **chính xác các chunk của Chiến lược B**, tại thời điểm truy xuất áp dụng thêm bộ lọc metadata `section` khi câu hỏi có điều kiện lọc (chỉ lọc với giá trị filter được người dùng cung cấp trước).
   - *Kiểm soát so sánh:* A–B chỉ thay đổi kỹ thuật chunking (cố định vs cấu trúc đoạn). B–C chỉ thay đổi việc áp dụng metadata filtering.
+  - *Mã nguồn Chunking:* [Lab06\K5-L3B-DAY06-HoangNgocHieu-2A202603976-DataIngestion\starter\src\chunking.py](../../starter/src/chunking.py).
 
 - **≥20 câu: phân chia ≥15 dev / ≥5 test, câu metadata filter và cách kiểm chứng evidence:**
-  - Bộ benchmark gồm **20 câu hỏi** được lưu tại [benchmark/questions.json](file:///d:/AI20K/Lab06/K5-L3B-DAY06-HoangNgocHieu-2A202603976-DataIngestion/benchmark/questions.json) và [starter/data/benchmark.json](file:///d:/AI20K/Lab06/K5-L3B-DAY06-HoangNgocHieu-2A202603976-DataIngestion/starter/data/benchmark.json):
+  - Bộ benchmark gồm **20 câu hỏi** được lưu tại [Lab06\K5-L3B-DAY06-HoangNgocHieu-2A202603976-DataIngestion\benchmark\questions.json](../../benchmark/questions.json) và bản sao tại [Lab06\K5-L3B-DAY06-HoangNgocHieu-2A202603976-DataIngestion\starter\data\benchmark.json](../../starter/data/benchmark.json):
     - **15 câu Dev** (`q01` – `q15`): gồm 8 câu trực tiếp, 3 câu diễn đạt lại, 2 câu điều kiện/ngoại lệ, và 2 câu kiểm tra metadata filter (`q10`, `q11`).
     - **5 câu Test** (`q16` – `q20`): gồm 2 câu trực tiếp, 1 câu diễn đạt lại, 1 câu điều kiện/ngoại lệ, và 1 câu kiểm tra metadata filter (`q18`).
+  - *Mã nguồn đánh giá (Evaluation):* [Lab06\K5-L3B-DAY06-HoangNgocHieu-2A202603976-DataIngestion\starter\src\evaluation.py](../../starter/src/evaluation.py).
   - *Kiểm chứng evidence:* 100% các đoạn `evidence_quote` được kiểm tra tự động và đối chiếu thủ công, đảm bảo tồn tại nguyên văn trên đúng số trang `gold_page` sau khi chuẩn hóa văn bản.
 
 - **Tiêu chí chọn chiến lược đã chốt trước khi xem test:**
@@ -89,11 +96,12 @@
 | **C** | 2.00 / 2 (10/10 mẫu) | 15/15 (100.0%) | 1/1 (100.0% tuân thủ tuyệt đối) | Mức 2: 3, Mức 1: 0, Mức 0: 2 → **1.20 / 2** |
 
 - **Đường dẫn trace, nhãn thủ công và cách chọn mẫu:**
-  - Full trace Strategy A: [starter/results/traces_strategy_a.json](file:///d:/AI20K/Lab06/K5-L3B-DAY06-HoangNgocHieu-2A202603976-DataIngestion/starter/results/traces_strategy_a.json)
-  - Full trace Strategy B: [starter/results/traces_strategy_b.json](file:///d:/AI20K/Lab06/K5-L3B-DAY06-HoangNgocHieu-2A202603976-DataIngestion/starter/results/traces_strategy_b.json)
-  - Full trace Strategy C: [starter/results/traces_strategy_c.json](file:///d:/AI20K/Lab06/K5-L3B-DAY06-HoangNgocHieu-2A202603976-DataIngestion/starter/results/traces_strategy_c.json)
-  - Bảng tổng hợp thí nghiệm: [artifacts/experiment_log.csv](file:///d:/AI20K/Lab06/K5-L3B-DAY06-HoangNgocHieu-2A202603976-DataIngestion/artifacts/experiment_log.csv)
-  - Dữ liệu audit thủ công: [starter/results/manual_audit.json](file:///d:/AI20K/Lab06/K5-L3B-DAY06-HoangNgocHieu-2A202603976-DataIngestion/starter/results/manual_audit.json)
+  - Full trace Strategy A: [Lab06\K5-L3B-DAY06-HoangNgocHieu-2A202603976-DataIngestion\starter\results\traces_strategy_a.json](../../starter/results/traces_strategy_a.json)
+  - Full trace Strategy B: [Lab06\K5-L3B-DAY06-HoangNgocHieu-2A202603976-DataIngestion\starter\results\traces_strategy_b.json](../../starter/results/traces_strategy_b.json)
+  - Full trace Strategy C: [Lab06\K5-L3B-DAY06-HoangNgocHieu-2A202603976-DataIngestion\starter\results\traces_strategy_c.json](../../starter/results/traces_strategy_c.json)
+  - Bảng tổng hợp thí nghiệm: [Lab06\K5-L3B-DAY06-HoangNgocHieu-2A202603976-DataIngestion\artifacts\experiment_log.csv](../../artifacts/experiment_log.csv)
+  - Dữ liệu audit thủ công: [Lab06\K5-L3B-DAY06-HoangNgocHieu-2A202603976-DataIngestion\starter\results\manual_audit.json](../../starter/results/manual_audit.json)
+  - Tóm tắt benchmark tổng hợp: [Lab06\K5-L3B-DAY06-HoangNgocHieu-2A202603976-DataIngestion\starter\results\benchmark_summary.json](../../starter/results/benchmark_summary.json)
   - *Cách chọn mẫu:* Coherence chọn 10 điểm cố định tại các trang tiêu biểu trải dài từ đầu đến cuối tài liệu (Trang 1, 3, 4, 6, 9, 11, 14, 17, 21, 24); Metadata và Grounding được audit trên toàn bộ 5 câu test × Top-3 (15 chunk/chiến lược).
 
 ---
