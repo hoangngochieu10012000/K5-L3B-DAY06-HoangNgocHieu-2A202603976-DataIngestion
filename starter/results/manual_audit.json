@@ -1,0 +1,350 @@
+{
+  "coherence": {
+    "A": {
+      "scores": [
+        {
+          "page": 1,
+          "chunk_id": "aio2025-tutorial-rag_p1_a00",
+          "score": 1,
+          "reason": "Bị ngắt ngang câu do cắt cứng ở 500 ký tự",
+          "preview": "Tutorial: RAG\nDương Trường Bình Nguyễn Anh Khôi Trần Đại Nhân\nDương Đình Thắng Đ"
+        },
+        {
+          "page": 3,
+          "chunk_id": "aio2025-tutorial-rag_p3_a00",
+          "score": 1,
+          "reason": "Bị ngắt ngang câu do cắt cứng ở 500 ký tự",
+          "preview": "Bảng thuật ngữ\nThuật ngữ Mô tả\nHallucination Hiện tượng mô hình sinh ra thông ti"
+        },
+        {
+          "page": 4,
+          "chunk_id": "aio2025-tutorial-rag_p4_a00",
+          "score": 1,
+          "reason": "Bị ngắt ngang câu do cắt cứng ở 500 ký tự",
+          "preview": "II. Cơ sở lý thuyết về RAG\n/inf⌢-circle Nguồn gốc\nKhái niệm RAG lần đầu tiên đượ"
+        },
+        {
+          "page": 6,
+          "chunk_id": "aio2025-tutorial-rag_p6_a00",
+          "score": 1,
+          "reason": "Bị ngắt ngang câu do cắt cứng ở 500 ký tự",
+          "preview": "Quy trình này bao gồm các bước từ cơ bản đến nâng cao như sau:\n1. Document Loadi"
+        },
+        {
+          "page": 9,
+          "chunk_id": "aio2025-tutorial-rag_p9_a00",
+          "score": 1,
+          "reason": "Bị ngắt ngang câu do cắt cứng ở 500 ký tự",
+          "preview": "II.2.2. Phase 2: Retrieval\nĐây là thành phần quyết định sự thành bại của hệ thốn"
+        },
+        {
+          "page": 11,
+          "chunk_id": "aio2025-tutorial-rag_p11_a00",
+          "score": 1,
+          "reason": "Bị ngắt ngang câu do cắt cứng ở 500 ký tự",
+          "preview": "/inf⌢-circle Cách hoạt động của thuật toán RRF\nVấn đề: Điểm số của Vector Search"
+        },
+        {
+          "page": 14,
+          "chunk_id": "aio2025-tutorial-rag_p14_a00",
+          "score": 1,
+          "reason": "Bị ngắt ngang câu do cắt cứng ở 500 ký tự",
+          "preview": "• Chain-of-Thought (CoT - Chuỗi suy luận): Yêu cầu mô hình suy nghĩ từng bước\n(L"
+        },
+        {
+          "page": 17,
+          "chunk_id": "aio2025-tutorial-rag_p17_a00",
+          "score": 1,
+          "reason": "Bị ngắt ngang câu do cắt cứng ở 500 ký tự",
+          "preview": "ứng dụng RAG mà không cần người lập trình phải tự xây dựng các kết nối thủ công "
+        },
+        {
+          "page": 21,
+          "chunk_id": "aio2025-tutorial-rag_p21_a00",
+          "score": 1,
+          "reason": "Bị ngắt ngang câu do cắt cứng ở 500 ký tự",
+          "preview": "IV. Thực hành\nTrong phần này, chúng ta sẽ hiện thực hoá các khái niệm về RAG và "
+        },
+        {
+          "page": 24,
+          "chunk_id": "aio2025-tutorial-rag_p24_a00",
+          "score": 1,
+          "reason": "Bị ngắt ngang câu do cắt cứng ở 500 ký tự",
+          "preview": "IV.3. Tiền xử lý văn bản và Chunking\nỞ bước này, ta làm sạch văn bản trích xuất "
+        }
+      ],
+      "average": 1.0
+    },
+    "B": {
+      "scores": [
+        {
+          "page": 1,
+          "chunk_id": "aio2025-tutorial-rag_p1_b00",
+          "score": 2,
+          "reason": "Trọn vẹn đoạn văn hoặc nhóm đoạn hoàn chỉnh theo cấu trúc",
+          "preview": "Tutorial: RAG\nDương Trường Bình Nguyễn Anh Khôi Trần Đại Nhân\nDương Đình Thắng Đ"
+        },
+        {
+          "page": 3,
+          "chunk_id": "aio2025-tutorial-rag_p3_b00",
+          "score": 2,
+          "reason": "Trọn vẹn đoạn văn hoặc nhóm đoạn hoàn chỉnh theo cấu trúc",
+          "preview": "Bảng thuật ngữ\nThuật ngữ Mô tả\nHallucination Hiện tượng mô hình sinh ra thông ti"
+        },
+        {
+          "page": 4,
+          "chunk_id": "aio2025-tutorial-rag_p4_b00",
+          "score": 2,
+          "reason": "Trọn vẹn đoạn văn hoặc nhóm đoạn hoàn chỉnh theo cấu trúc",
+          "preview": "II. Cơ sở lý thuyết về RAG\n/inf⌢-circle Nguồn gốc\nKhái niệm RAG lần đầu tiên đượ"
+        },
+        {
+          "page": 6,
+          "chunk_id": "aio2025-tutorial-rag_p6_b00",
+          "score": 2,
+          "reason": "Trọn vẹn đoạn văn hoặc nhóm đoạn hoàn chỉnh theo cấu trúc",
+          "preview": "Quy trình này bao gồm các bước từ cơ bản đến nâng cao như sau:\n1. Document Loadi"
+        },
+        {
+          "page": 9,
+          "chunk_id": "aio2025-tutorial-rag_p9_b00",
+          "score": 2,
+          "reason": "Trọn vẹn đoạn văn hoặc nhóm đoạn hoàn chỉnh theo cấu trúc",
+          "preview": "II.2.2. Phase 2: Retrieval\nĐây là thành phần quyết định sự thành bại của hệ thốn"
+        },
+        {
+          "page": 11,
+          "chunk_id": "aio2025-tutorial-rag_p11_b00",
+          "score": 2,
+          "reason": "Trọn vẹn đoạn văn hoặc nhóm đoạn hoàn chỉnh theo cấu trúc",
+          "preview": "/inf⌢-circle Cách hoạt động của thuật toán RRF\nVấn đề: Điểm số của Vector Search"
+        },
+        {
+          "page": 14,
+          "chunk_id": "aio2025-tutorial-rag_p14_b00",
+          "score": 2,
+          "reason": "Trọn vẹn đoạn văn hoặc nhóm đoạn hoàn chỉnh theo cấu trúc",
+          "preview": "• Chain-of-Thought (CoT - Chuỗi suy luận): Yêu cầu mô hình suy nghĩ từng bước\n(L"
+        },
+        {
+          "page": 17,
+          "chunk_id": "aio2025-tutorial-rag_p17_b00",
+          "score": 2,
+          "reason": "Trọn vẹn đoạn văn hoặc nhóm đoạn hoàn chỉnh theo cấu trúc",
+          "preview": "ứng dụng RAG mà không cần người lập trình phải tự xây dựng các kết nối thủ công "
+        },
+        {
+          "page": 21,
+          "chunk_id": "aio2025-tutorial-rag_p21_b00",
+          "score": 2,
+          "reason": "Trọn vẹn đoạn văn hoặc nhóm đoạn hoàn chỉnh theo cấu trúc",
+          "preview": "IV. Thực hành\nTrong phần này, chúng ta sẽ hiện thực hoá các khái niệm về RAG và "
+        },
+        {
+          "page": 24,
+          "chunk_id": "aio2025-tutorial-rag_p24_b00",
+          "score": 2,
+          "reason": "Trọn vẹn đoạn văn hoặc nhóm đoạn hoàn chỉnh theo cấu trúc",
+          "preview": "IV.3. Tiền xử lý văn bản và Chunking\nỞ bước này, ta làm sạch văn bản trích xuất "
+        }
+      ],
+      "average": 2.0
+    },
+    "C": {
+      "scores": [
+        {
+          "page": 1,
+          "chunk_id": "aio2025-tutorial-rag_p1_b00",
+          "score": 2,
+          "reason": "Trọn vẹn đoạn văn hoặc nhóm đoạn hoàn chỉnh theo cấu trúc",
+          "preview": "Tutorial: RAG\nDương Trường Bình Nguyễn Anh Khôi Trần Đại Nhân\nDương Đình Thắng Đ"
+        },
+        {
+          "page": 3,
+          "chunk_id": "aio2025-tutorial-rag_p3_b00",
+          "score": 2,
+          "reason": "Trọn vẹn đoạn văn hoặc nhóm đoạn hoàn chỉnh theo cấu trúc",
+          "preview": "Bảng thuật ngữ\nThuật ngữ Mô tả\nHallucination Hiện tượng mô hình sinh ra thông ti"
+        },
+        {
+          "page": 4,
+          "chunk_id": "aio2025-tutorial-rag_p4_b00",
+          "score": 2,
+          "reason": "Trọn vẹn đoạn văn hoặc nhóm đoạn hoàn chỉnh theo cấu trúc",
+          "preview": "II. Cơ sở lý thuyết về RAG\n/inf⌢-circle Nguồn gốc\nKhái niệm RAG lần đầu tiên đượ"
+        },
+        {
+          "page": 6,
+          "chunk_id": "aio2025-tutorial-rag_p6_b00",
+          "score": 2,
+          "reason": "Trọn vẹn đoạn văn hoặc nhóm đoạn hoàn chỉnh theo cấu trúc",
+          "preview": "Quy trình này bao gồm các bước từ cơ bản đến nâng cao như sau:\n1. Document Loadi"
+        },
+        {
+          "page": 9,
+          "chunk_id": "aio2025-tutorial-rag_p9_b00",
+          "score": 2,
+          "reason": "Trọn vẹn đoạn văn hoặc nhóm đoạn hoàn chỉnh theo cấu trúc",
+          "preview": "II.2.2. Phase 2: Retrieval\nĐây là thành phần quyết định sự thành bại của hệ thốn"
+        },
+        {
+          "page": 11,
+          "chunk_id": "aio2025-tutorial-rag_p11_b00",
+          "score": 2,
+          "reason": "Trọn vẹn đoạn văn hoặc nhóm đoạn hoàn chỉnh theo cấu trúc",
+          "preview": "/inf⌢-circle Cách hoạt động của thuật toán RRF\nVấn đề: Điểm số của Vector Search"
+        },
+        {
+          "page": 14,
+          "chunk_id": "aio2025-tutorial-rag_p14_b00",
+          "score": 2,
+          "reason": "Trọn vẹn đoạn văn hoặc nhóm đoạn hoàn chỉnh theo cấu trúc",
+          "preview": "• Chain-of-Thought (CoT - Chuỗi suy luận): Yêu cầu mô hình suy nghĩ từng bước\n(L"
+        },
+        {
+          "page": 17,
+          "chunk_id": "aio2025-tutorial-rag_p17_b00",
+          "score": 2,
+          "reason": "Trọn vẹn đoạn văn hoặc nhóm đoạn hoàn chỉnh theo cấu trúc",
+          "preview": "ứng dụng RAG mà không cần người lập trình phải tự xây dựng các kết nối thủ công "
+        },
+        {
+          "page": 21,
+          "chunk_id": "aio2025-tutorial-rag_p21_b00",
+          "score": 2,
+          "reason": "Trọn vẹn đoạn văn hoặc nhóm đoạn hoàn chỉnh theo cấu trúc",
+          "preview": "IV. Thực hành\nTrong phần này, chúng ta sẽ hiện thực hoá các khái niệm về RAG và "
+        },
+        {
+          "page": 24,
+          "chunk_id": "aio2025-tutorial-rag_p24_b00",
+          "score": 2,
+          "reason": "Trọn vẹn đoạn văn hoặc nhóm đoạn hoàn chỉnh theo cấu trúc",
+          "preview": "IV.3. Tiền xử lý văn bản và Chunking\nỞ bước này, ta làm sạch văn bản trích xuất "
+        }
+      ],
+      "average": 2.0
+    }
+  },
+  "metadata": {
+    "A": {
+      "metadata_accuracy": "15/15 (100.0%)",
+      "filter_compliance": "0/1"
+    },
+    "B": {
+      "metadata_accuracy": "15/15 (100.0%)",
+      "filter_compliance": "0/1"
+    },
+    "C": {
+      "metadata_accuracy": "15/15 (100.0%)",
+      "filter_compliance": "1/1"
+    }
+  },
+  "grounding": {
+    "A": {
+      "scores": [
+        {
+          "qid": "q16",
+          "score": 2,
+          "reason": "Top-1 chứa đầy đủ bằng chứng và nguồn trang để trả lời chính xác"
+        },
+        {
+          "qid": "q17",
+          "score": 2,
+          "reason": "Top-1 chứa đầy đủ bằng chứng và nguồn trang để trả lời chính xác"
+        },
+        {
+          "qid": "q18",
+          "score": 2,
+          "reason": "Top-1 chứa đầy đủ bằng chứng và nguồn trang để trả lời chính xác"
+        },
+        {
+          "qid": "q19",
+          "score": 2,
+          "reason": "Có bằng chứng trong top-3 nhưng nằm ở rank 2 hoặc 3"
+        },
+        {
+          "qid": "q20",
+          "score": 2,
+          "reason": "Top-1 chứa đầy đủ bằng chứng và nguồn trang để trả lời chính xác"
+        }
+      ],
+      "counts": {
+        "2": 5,
+        "1": 0,
+        "0": 0
+      },
+      "average": 2.0
+    },
+    "B": {
+      "scores": [
+        {
+          "qid": "q16",
+          "score": 2,
+          "reason": "Top-1 chứa đầy đủ bằng chứng và nguồn trang để trả lời chính xác"
+        },
+        {
+          "qid": "q17",
+          "score": 0,
+          "reason": "Không có bằng chứng đủ trong top-3"
+        },
+        {
+          "qid": "q18",
+          "score": 2,
+          "reason": "Top-1 chứa đầy đủ bằng chứng và nguồn trang để trả lời chính xác"
+        },
+        {
+          "qid": "q19",
+          "score": 0,
+          "reason": "Không có bằng chứng đủ trong top-3"
+        },
+        {
+          "qid": "q20",
+          "score": 2,
+          "reason": "Top-1 chứa đầy đủ bằng chứng và nguồn trang để trả lời chính xác"
+        }
+      ],
+      "counts": {
+        "2": 3,
+        "1": 0,
+        "0": 2
+      },
+      "average": 1.2
+    },
+    "C": {
+      "scores": [
+        {
+          "qid": "q16",
+          "score": 2,
+          "reason": "Top-1 chứa đầy đủ bằng chứng và nguồn trang để trả lời chính xác"
+        },
+        {
+          "qid": "q17",
+          "score": 0,
+          "reason": "Không có bằng chứng đủ trong top-3"
+        },
+        {
+          "qid": "q18",
+          "score": 2,
+          "reason": "Top-1 chứa đầy đủ bằng chứng và nguồn trang để trả lời chính xác"
+        },
+        {
+          "qid": "q19",
+          "score": 0,
+          "reason": "Không có bằng chứng đủ trong top-3"
+        },
+        {
+          "qid": "q20",
+          "score": 2,
+          "reason": "Top-1 chứa đầy đủ bằng chứng và nguồn trang để trả lời chính xác"
+        }
+      ],
+      "counts": {
+        "2": 3,
+        "1": 0,
+        "0": 2
+      },
+      "average": 1.2
+    }
+  }
+}

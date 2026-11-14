@@ -1,0 +1,206 @@
+{
+  "source_id": "aio2025-tutorial-rag",
+  "title": "AI VIET NAM (AIO2025) - Tutorial: RAG (Retrieval-Augmented Generation)",
+  "source_path_or_url": "data/AIO2025_Tutorial_RAG.pdf",
+  "license_or_permission": "Tài liệu đào tạo của AI VIET NAM (AIO2025), sử dụng cho mục đích học tập và nghiên cứu cá nhân.",
+  "accessed_at": "2026-11-14",
+  "version": "AIO2025-v1.0",
+  "total_physical_pages": 35,
+  "total_content_pages": 32,
+  "total_characters_raw": 52520,
+  "page_counting_rules": "Loại bỏ trang bìa/mục lục (trang 2), trang cụt chứa fragment mã nguồn ngắn dưới 100 ký tự (trang 20), và trang phụ lục/tài liệu tham khảo (trang 35). Các trang nội dung còn lại (32 trang) đều có dung lượng từ 772 đến 2191 ký tự có cấu trúc hoàn chỉnh.",
+  "content_pages": [
+    {
+      "page_number": 1,
+      "is_content_page": true,
+      "character_count": 1233,
+      "exclusion_reason": null
+    },
+    {
+      "page_number": 3,
+      "is_content_page": true,
+      "character_count": 1098,
+      "exclusion_reason": null
+    },
+    {
+      "page_number": 4,
+      "is_content_page": true,
+      "character_count": 2113,
+      "exclusion_reason": null
+    },
+    {
+      "page_number": 5,
+      "is_content_page": true,
+      "character_count": 1631,
+      "exclusion_reason": null
+    },
+    {
+      "page_number": 6,
+      "is_content_page": true,
+      "character_count": 1823,
+      "exclusion_reason": null
+    },
+    {
+      "page_number": 7,
+      "is_content_page": true,
+      "character_count": 1850,
+      "exclusion_reason": null
+    },
+    {
+      "page_number": 8,
+      "is_content_page": true,
+      "character_count": 2191,
+      "exclusion_reason": null
+    },
+    {
+      "page_number": 9,
+      "is_content_page": true,
+      "character_count": 1961,
+      "exclusion_reason": null
+    },
+    {
+      "page_number": 10,
+      "is_content_page": true,
+      "character_count": 1590,
+      "exclusion_reason": null
+    },
+    {
+      "page_number": 11,
+      "is_content_page": true,
+      "character_count": 2157,
+      "exclusion_reason": null
+    },
+    {
+      "page_number": 12,
+      "is_content_page": true,
+      "character_count": 1797,
+      "exclusion_reason": null
+    },
+    {
+      "page_number": 13,
+      "is_content_page": true,
+      "character_count": 1571,
+      "exclusion_reason": null
+    },
+    {
+      "page_number": 14,
+      "is_content_page": true,
+      "character_count": 1416,
+      "exclusion_reason": null
+    },
+    {
+      "page_number": 15,
+      "is_content_page": true,
+      "character_count": 1857,
+      "exclusion_reason": null
+    },
+    {
+      "page_number": 16,
+      "is_content_page": true,
+      "character_count": 1895,
+      "exclusion_reason": null
+    },
+    {
+      "page_number": 17,
+      "is_content_page": true,
+      "character_count": 1352,
+      "exclusion_reason": null
+    },
+    {
+      "page_number": 18,
+      "is_content_page": true,
+      "character_count": 1826,
+      "exclusion_reason": null
+    },
+    {
+      "page_number": 19,
+      "is_content_page": true,
+      "character_count": 1770,
+      "exclusion_reason": null
+    },
+    {
+      "page_number": 21,
+      "is_content_page": true,
+      "character_count": 1623,
+      "exclusion_reason": null
+    },
+    {
+      "page_number": 22,
+      "is_content_page": true,
+      "character_count": 1701,
+      "exclusion_reason": null
+    },
+    {
+      "page_number": 23,
+      "is_content_page": true,
+      "character_count": 1604,
+      "exclusion_reason": null
+    },
+    {
+      "page_number": 24,
+      "is_content_page": true,
+      "character_count": 1688,
+      "exclusion_reason": null
+    },
+    {
+      "page_number": 25,
+      "is_content_page": true,
+      "character_count": 1609,
+      "exclusion_reason": null
+    },
+    {
+      "page_number": 26,
+      "is_content_page": true,
+      "character_count": 1635,
+      "exclusion_reason": null
+    },
+    {
+      "page_number": 27,
+      "is_content_page": true,
+      "character_count": 1552,
+      "exclusion_reason": null
+    },
+    {
+      "page_number": 28,
+      "is_content_page": true,
+      "character_count": 1536,
+      "exclusion_reason": null
+    },
+    {
+      "page_number": 29,
+      "is_content_page": true,
+      "character_count": 1548,
+      "exclusion_reason": null
+    },
+    {
+      "page_number": 30,
+      "is_content_page": true,
+      "character_count": 950,
+      "exclusion_reason": null
+    },
+    {
+      "page_number": 31,
+      "is_content_page": true,
+      "character_count": 1949,
+      "exclusion_reason": null
+    },
+    {
+      "page_number": 32,
+      "is_content_page": true,
+      "character_count": 1470,
+      "exclusion_reason": null
+    },
+    {
+      "page_number": 33,
+      "is_content_page": true,
+      "character_count": 1752,
+      "exclusion_reason": null
+    },
+    {
+      "page_number": 34,
+      "is_content_page": true,
+      "character_count": 772,
+      "exclusion_reason": null
+    }
+  ]
+}

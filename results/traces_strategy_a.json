@@ -1,0 +1,928 @@
+[
+  {
+    "question_id": "q01",
+    "split": "dev",
+    "question": "Khái niệm RAG lần đầu tiên được đề xuất chính thức trong bài báo nào và bởi ai?",
+    "gold_page": [
+      4
+    ],
+    "filter": null,
+    "hit_at_1": true,
+    "hit_at_3": true,
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "aio2025-tutorial-rag_p4_a00",
+        "page": 4,
+        "section": "ly_thuyet_co_ban",
+        "score": 0.8162747956492297,
+        "page_match": true,
+        "evidence_match": true,
+        "is_hit": true,
+        "text_preview": "II. Cơ sở lý thuyết về RAG\n/inf⌢-circle Nguồn gốc\nKhái niệm RAG lần đầu tiên được đề xuất chính thức trong bài báo khoa học “Retrieval-\nAugmented Gene..."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "aio2025-tutorial-rag_p5_a00",
+        "page": 5,
+        "section": "ly_thuyet_co_ban",
+        "score": 0.7755654234739001,
+        "page_match": false,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "II.1. Sự chuyển dịch sang In-Context RAG\nMặc dù thuật ngữ RAG vẫn được giữ nguyên, tư duy triển khai kỹ thuật này đã thay đổi căn\nbản cùng với sự phát..."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "aio2025-tutorial-rag_p4_a02",
+        "page": 4,
+        "section": "ly_thuyet_co_ban",
+        "score": 0.7667488301445615,
+        "page_match": true,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "Query\nHình 2: Tổng quan kiến trúc RAG trong bài báo gốc của Patrick Lewis (2020).\nTrong công trình này, nhóm tác giả định nghĩa RAG là một mô hình xác..."
+      }
+    ]
+  },
+  {
+    "question_id": "q02",
+    "split": "dev",
+    "question": "Thuật ngữ Hallucination trong mô hình ngôn ngữ lớn được định nghĩa như thế nào?",
+    "gold_page": [
+      3
+    ],
+    "filter": null,
+    "hit_at_1": true,
+    "hit_at_3": true,
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "aio2025-tutorial-rag_p3_a00",
+        "page": 3,
+        "section": "thuat_ngu",
+        "score": 0.7614951710165745,
+        "page_match": true,
+        "evidence_match": true,
+        "is_hit": true,
+        "text_preview": "Bảng thuật ngữ\nThuật ngữ Mô tả\nHallucination Hiện tượng mô hình sinh ra thông tin sai lệch, bịa đặt hoặc không có thực nhưng với văn phong tự tin.\nKno..."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "aio2025-tutorial-rag_p8_a00",
+        "page": 8,
+        "section": "ly_thuyet_co_ban",
+        "score": 0.6996872739127141,
+        "page_match": false,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "Ví dụ: Chunk 1 kết thúc ở từ thứ 100, thì Chunk 2 sẽ bắt đầu từ từ thứ 80. Phần\ngiao thoa này đóng vai trò như “cầu nối” ngữ cảnh.\nTrí tuệ nhân tạo đa..."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "aio2025-tutorial-rag_p7_a03",
+        "page": 7,
+        "section": "ly_thuyet_co_ban",
+        "score": 0.6830463218943117,
+        "page_match": false,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "lĩnh vực\ncủa đời sống hiện đại. Các mô hình ngôn ngữ lớn giúp chúng ta xử lý\nvà phân tích khối lượng dữ liệu khổng lồ chỉ trong tích tắc. Tuy\nnhiên, v..."
+      }
+    ]
+  },
+  {
+    "question_id": "q03",
+    "split": "dev",
+    "question": "Kỹ thuật Grounding có vai trò gì trong hệ thống hỏi đáp?",
+    "gold_page": [
+      3
+    ],
+    "filter": null,
+    "hit_at_1": true,
+    "hit_at_3": true,
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "aio2025-tutorial-rag_p3_a02",
+        "page": 3,
+        "section": "thuat_ngu",
+        "score": 0.7847424757643089,
+        "page_match": true,
+        "evidence_match": true,
+        "is_hit": true,
+        "text_preview": "có thể tiếp nhận và xử lý trong một lần prompt.\nGrounding Kỹ thuật “neo” câu trả lời của mô hình vào dữ liệu thực tế được cung cấp để đảm bảo tính xác..."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "aio2025-tutorial-rag_p9_a02",
+        "page": 9,
+        "section": "retrieval_generation",
+        "score": 0.7045667248824277,
+        "page_match": false,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "lỗi connection timeout khi kết nối database.”\n(b) “Xử lý lỗi Access Denied cho user root trong MySQL/PostgreSQL.”\n(c) “Hướng dẫn kiểm tra firewall chặ..."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "aio2025-tutorial-rag_p9_a04",
+        "page": 9,
+        "section": "retrieval_generation",
+        "score": 0.7029060141420315,
+        "page_match": false,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "y sẽ khớp tốt với tài liệu “Sổ tay nhân viên”\nhoặc “Quy trình an ninh” trong database, tốt hơn nhiều so với câu hỏi gốc."
+      }
+    ]
+  },
+  {
+    "question_id": "q04",
+    "split": "dev",
+    "question": "Trong kiến trúc RAG nguyên bản năm 2020, mô hình nào đóng vai trò Generator sinh văn bản?",
+    "gold_page": [
+      4
+    ],
+    "filter": null,
+    "hit_at_1": true,
+    "hit_at_3": true,
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "aio2025-tutorial-rag_p4_a03",
+        "page": 4,
+        "section": "ly_thuyet_co_ban",
+        "score": 0.7901879328961572,
+        "page_match": true,
+        "evidence_match": true,
+        "is_hit": true,
+        "text_preview": "bài báo, tác giả sử dụng mô hình BART (Bidirectional and Auto-Regressive\nTransformers) làm Generator.\n• Non-Parametric Memory (Bộ nhớ phi tham số): Là..."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "aio2025-tutorial-rag_p4_a02",
+        "page": 4,
+        "section": "ly_thuyet_co_ban",
+        "score": 0.7883971732521826,
+        "page_match": true,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "Query\nHình 2: Tổng quan kiến trúc RAG trong bài báo gốc của Patrick Lewis (2020).\nTrong công trình này, nhóm tác giả định nghĩa RAG là một mô hình xác..."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "aio2025-tutorial-rag_p5_a00",
+        "page": 5,
+        "section": "ly_thuyet_co_ban",
+        "score": 0.7854899040661274,
+        "page_match": false,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "II.1. Sự chuyển dịch sang In-Context RAG\nMặc dù thuật ngữ RAG vẫn được giữ nguyên, tư duy triển khai kỹ thuật này đã thay đổi căn\nbản cùng với sự phát..."
+      }
+    ]
+  },
+  {
+    "question_id": "q05",
+    "split": "dev",
+    "question": "Sự chuyển dịch sang In-Context RAG tận dụng khả năng gì của các mô hình LLM hiện đại?",
+    "gold_page": [
+      5
+    ],
+    "filter": null,
+    "hit_at_1": true,
+    "hit_at_3": true,
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "aio2025-tutorial-rag_p5_a00",
+        "page": 5,
+        "section": "ly_thuyet_co_ban",
+        "score": 0.86369389451683,
+        "page_match": true,
+        "evidence_match": true,
+        "is_hit": true,
+        "text_preview": "II.1. Sự chuyển dịch sang In-Context RAG\nMặc dù thuật ngữ RAG vẫn được giữ nguyên, tư duy triển khai kỹ thuật này đã thay đổi căn\nbản cùng với sự phát..."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "aio2025-tutorial-rag_p5_a01",
+        "page": 5,
+        "section": "ly_thuyet_co_ban",
+        "score": 0.7970570144432189,
+        "page_match": true,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "y): Là hướng tiếp cận dựa trên In-Context Learning. Với sự\nbùng nổ của các LLM cực lớn có khả năng hiểu ngữ cảnh rộng, RAG hiện đại thường ám\nchỉ quy ..."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "aio2025-tutorial-rag_p1_a00",
+        "page": 1,
+        "section": "dan_nhap",
+        "score": 0.770424516488978,
+        "page_match": false,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "Tutorial: RAG\nDương Trường Bình Nguyễn Anh Khôi Trần Đại Nhân\nDương Đình Thắng Đinh Quang Vinh\nI. Dẫn nhập\nSự bùng nổ của các Large Language Models (L..."
+      }
+    ]
+  },
+  {
+    "question_id": "q06",
+    "split": "dev",
+    "question": "Mục đích của việc thiết lập chunk overlap (độ chồng lấp) khi chia nhỏ văn bản là gì?",
+    "gold_page": [
+      8
+    ],
+    "filter": null,
+    "hit_at_1": false,
+    "hit_at_3": false,
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "aio2025-tutorial-rag_p33_a00",
+        "page": 33,
+        "section": "cau_hoi_trac_nghiem",
+        "score": 0.7695631923613462,
+        "page_match": false,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "4 separators=[\"\\n\\n\", \"\\n\", \" \", \"\"],\n5 chunk_size=chunk_size,\n6 chunk_overlap=chunk_overlap,\n7 length_function=len,\n8 )\nTrong bối cảnh xây dựng RAG, ..."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "aio2025-tutorial-rag_p7_a01",
+        "page": 7,
+        "section": "ly_thuyet_co_ban",
+        "score": 0.7583216872935334,
+        "page_match": false,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "ích khối lượng dữ liệu khổng lồ chỉ trong tích tắc.\nTuy nhiên, việc ứng dụng công nghệ này đòi hỏi sự hiểu biết sâu\nsắc để đảm bảo tính chính xác và a..."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "aio2025-tutorial-rag_p18_a01",
+        "page": 18,
+        "section": "gioi_thieu_langchain",
+        "score": 0.7496986888068037,
+        "page_match": false,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "ác ký tự phân cách như xuống dòng, khoảng trắng, để\ngiữ nguyên vẹn ngữ nghĩa.\n• Giữ lại một phần ký tự trùng lặp giữa các đoạn liền kề để đảm bảo ngữ ..."
+      }
+    ]
+  },
+  {
+    "question_id": "q07",
+    "split": "dev",
+    "question": "Vì sao không thể cộng trực tiếp điểm số của Vector Search và BM25 trong Hybrid Search?",
+    "gold_page": [
+      11
+    ],
+    "filter": null,
+    "hit_at_1": false,
+    "hit_at_3": true,
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "aio2025-tutorial-rag_p31_a00",
+        "page": 31,
+        "section": "cau_hoi_trac_nghiem",
+        "score": 0.8379437722881873,
+        "page_match": false,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "V. Câu hỏi trắc nghiệm\n1. Trong cơ chế Hybrid Search, tại sao chúng ta không thể cộng trực tiếp điểm số từ Vector\nSearch và Keyword Search mà phải cần..."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "aio2025-tutorial-rag_p11_a00",
+        "page": 11,
+        "section": "retrieval_generation",
+        "score": 0.7712895109321231,
+        "page_match": true,
+        "evidence_match": true,
+        "is_hit": true,
+        "text_preview": "/inf⌢-circle Cách hoạt động của thuật toán RRF\nVấn đề: Điểm số của Vector Search và BM25 có thang đo hoàn toàn khác nhau, việc\ncộng trực tiếp sẽ không..."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "aio2025-tutorial-rag_p10_a01",
+        "page": 10,
+        "section": "retrieval_generation",
+        "score": 0.7598959958172504,
+        "page_match": false,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "án ANN (Approximate\nNearest Neighbor) như HNSW để tìm kiếm lân cận gần đúng với độ trễ thấp.\n• Vấn đề: Tìm kiếm vector rất tốt về ngữ nghĩa nhưng lại ..."
+      }
+    ]
+  },
+  {
+    "question_id": "q08",
+    "split": "dev",
+    "question": "Sau khi qua bước Cross-Encoder trong Re-ranking, mô hình có thể giải quyết được mối quan hệ gì?",
+    "gold_page": [
+      12
+    ],
+    "filter": null,
+    "hit_at_1": false,
+    "hit_at_3": true,
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "aio2025-tutorial-rag_p11_a01",
+        "page": 11,
+        "section": "retrieval_generation",
+        "score": 0.7783292350719181,
+        "page_match": false,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "iệu\nTop 1 chiếm ưu thế quá tuyệt đối so với Top 2, Top 3.\n– Kết quả: Tài liệu đứng hạng trung bình ở cả 2 danh sách thường có tổng điểm\ncao hơn tài li..."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "aio2025-tutorial-rag_p11_a02",
+        "page": 11,
+        "section": "retrieval_generation",
+        "score": 0.7768502659701844,
+        "page_match": false,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "m điểm lại\nmức độ liên quan giữa câu hỏi và từng tài liệu trong tập ứng viên ban đầu.\n• Tại sao cần Cross-Encoder?\n– Bi-Encoder (Dùng ở bước Indexing/..."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "aio2025-tutorial-rag_p12_a00",
+        "page": 12,
+        "section": "retrieval_generation",
+        "score": 0.7729865088725972,
+        "page_match": true,
+        "evidence_match": true,
+        "is_hit": true,
+        "text_preview": "2. Sau khi qua Cross-Encoder (Re-ranking): (Mô hình đọc hiểu mối quan hệ “không\nnhận được” → “lỗi/spam”)\nA. Rank 1: “Xử lý lỗi email bị rơi vào thư mụ..."
+      }
+    ]
+  },
+  {
+    "question_id": "q09",
+    "split": "dev",
+    "question": "Nếu loại bỏ hoàn toàn LLM trong kiến trúc RAG thì hệ thống sẽ như thế nào?",
+    "gold_page": [
+      16
+    ],
+    "filter": null,
+    "hit_at_1": false,
+    "hit_at_3": false,
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "aio2025-tutorial-rag_p15_a00",
+        "page": 15,
+        "section": "phan_tich_vai_tro",
+        "score": 0.7757493917878963,
+        "page_match": false,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "II.3. Mở rộng: Phân tích vai trò của các thành phần\nĐể đánh giá chính xác tầm quan trọng của từng module trong kiến trúc RAG, chúng ta cùng\nphân tích ..."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "aio2025-tutorial-rag_p16_a02",
+        "page": 16,
+        "section": "phan_tich_vai_tro",
+        "score": 0.7605487544443119,
+        "page_match": true,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "AG dựa trên truy vấn từ khóa\nGiảm mạnh truy vấn theo ngữ\nnghĩa, khó bắt từ đồng nghĩa,\nvà dễ bỏ sót thông tin.\nVector\nStore/ANN Index\nUnscalable Proto..."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "aio2025-tutorial-rag_p4_a02",
+        "page": 4,
+        "section": "ly_thuyet_co_ban",
+        "score": 0.7536361461621381,
+        "page_match": false,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "Query\nHình 2: Tổng quan kiến trúc RAG trong bài báo gốc của Patrick Lewis (2020).\nTrong công trình này, nhóm tác giả định nghĩa RAG là một mô hình xác..."
+      }
+    ]
+  },
+  {
+    "question_id": "q10",
+    "split": "dev",
+    "question": "Trong phần cơ sở lý thuyết, các bước của quy trình Ingestion bao gồm những giai đoạn nào?",
+    "gold_page": [
+      6
+    ],
+    "filter": {
+      "section": "ly_thuyet_co_ban"
+    },
+    "hit_at_1": false,
+    "hit_at_3": false,
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "aio2025-tutorial-rag_p3_a02",
+        "page": 3,
+        "section": "thuat_ngu",
+        "score": 0.695479687972266,
+        "page_match": false,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "có thể tiếp nhận và xử lý trong một lần prompt.\nGrounding Kỹ thuật “neo” câu trả lời của mô hình vào dữ liệu thực tế được cung cấp để đảm bảo tính xác..."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "aio2025-tutorial-rag_p4_a00",
+        "page": 4,
+        "section": "ly_thuyet_co_ban",
+        "score": 0.6931386729483913,
+        "page_match": false,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "II. Cơ sở lý thuyết về RAG\n/inf⌢-circle Nguồn gốc\nKhái niệm RAG lần đầu tiên được đề xuất chính thức trong bài báo khoa học “Retrieval-\nAugmented Gene..."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "aio2025-tutorial-rag_p5_a02",
+        "page": 5,
+        "section": "ly_thuyet_co_ban",
+        "score": 0.6877232499274755,
+        "page_match": false,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "g cần quy\ntrình huấn luyện phức tạp.\nII.2. Kiến trúc RAG hiện đại\nMột hệ thống RAG tiêu chuẩn hiện nay thường được mô hình hóa thành một quy trình gồm..."
+      }
+    ]
+  },
+  {
+    "question_id": "q11",
+    "split": "dev",
+    "question": "Trong phần thực hành, hàm clean_vietnamese_text giúp giải quyết vấn đề gì khi trích xuất PDF?",
+    "gold_page": [
+      24
+    ],
+    "filter": {
+      "section": "thuc_hanh_pipeline"
+    },
+    "hit_at_1": false,
+    "hit_at_3": false,
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "aio2025-tutorial-rag_p24_a00",
+        "page": 24,
+        "section": "thuc_hanh_pipeline",
+        "score": 0.8643263969023454,
+        "page_match": true,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "IV.3. Tiền xử lý văn bản và Chunking\nỞ bước này, ta làm sạch văn bản trích xuất từ các file PDF và chia nội dung thành các đoạn nhỏ\nphù hợp. Việc tiền..."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "aio2025-tutorial-rag_p24_a03",
+        "page": 24,
+        "section": "thuc_hanh_pipeline",
+        "score": 0.8117548756998144,
+        "page_match": true,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "rTextSplitter\n6 class SimpleLoader:\n7 # Tải một file PDF và gọi hàm làm sạch nội dung văn bản\n8 def load_pdf(self, pdf_file: str):\n9 docs = PyPDFLoade..."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "aio2025-tutorial-rag_p24_a02",
+        "page": 24,
+        "section": "thuc_hanh_pipeline",
+        "score": 0.7485571918539292,
+        "page_match": true,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "text = re.sub(r’\\s+’, ’ ’, text)\n15 text = re.sub(r’\\n\\s*\\n’, ’\\n’, text)\n16 return text.strip()\nTải và chia nhỏ tài liệu PDF\nSau khi đã có hàm làm sạ..."
+      }
+    ]
+  },
+  {
+    "question_id": "q12",
+    "split": "dev",
+    "question": "Mô hình ngôn ngữ (LLM) nào được sử dụng trong phần thực hành RAG pipeline?",
+    "gold_page": [
+      26
+    ],
+    "filter": null,
+    "hit_at_1": false,
+    "hit_at_3": false,
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "aio2025-tutorial-rag_p21_a01",
+        "page": 21,
+        "section": "thuc_hanh_pipeline",
+        "score": 0.7968669732613314,
+        "page_match": false,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "thống RAG sử dụng ChromaDB và mô hình ngôn ngữ Qwen.\nQuan sát Hình 10, quy trình phần thực hành bắt đầu từ việc xử lý tài liệu đầu vào, sau đó thực\nhi..."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "aio2025-tutorial-rag_p5_a00",
+        "page": 5,
+        "section": "ly_thuyet_co_ban",
+        "score": 0.7954691814490265,
+        "page_match": false,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "II.1. Sự chuyển dịch sang In-Context RAG\nMặc dù thuật ngữ RAG vẫn được giữ nguyên, tư duy triển khai kỹ thuật này đã thay đổi căn\nbản cùng với sự phát..."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "aio2025-tutorial-rag_p1_a00",
+        "page": 1,
+        "section": "dan_nhap",
+        "score": 0.7847554215683049,
+        "page_match": false,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "Tutorial: RAG\nDương Trường Bình Nguyễn Anh Khôi Trần Đại Nhân\nDương Đình Thắng Đinh Quang Vinh\nI. Dẫn nhập\nSự bùng nổ của các Large Language Models (L..."
+      }
+    ]
+  },
+  {
+    "question_id": "q13",
+    "split": "dev",
+    "question": "Kỹ thuật Chain-of-Thought (CoT) hướng dẫn mô hình làm gì trước khi đưa ra kết luận?",
+    "gold_page": [
+      14
+    ],
+    "filter": null,
+    "hit_at_1": true,
+    "hit_at_3": true,
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "aio2025-tutorial-rag_p14_a00",
+        "page": 14,
+        "section": "retrieval_generation",
+        "score": 0.8231529730290137,
+        "page_match": true,
+        "evidence_match": true,
+        "is_hit": true,
+        "text_preview": "• Chain-of-Thought (CoT - Chuỗi suy luận): Yêu cầu mô hình suy nghĩ từng bước\n(Let’s think step by step) dựa trên các dữ kiện trong context trước khi ..."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "aio2025-tutorial-rag_p3_a02",
+        "page": 3,
+        "section": "thuat_ngu",
+        "score": 0.7142109148512357,
+        "page_match": false,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "có thể tiếp nhận và xử lý trong một lần prompt.\nGrounding Kỹ thuật “neo” câu trả lời của mô hình vào dữ liệu thực tế được cung cấp để đảm bảo tính xác..."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "aio2025-tutorial-rag_p21_a02",
+        "page": 21,
+        "section": "thuc_hanh_pipeline",
+        "score": 0.6867592732120261,
+        "page_match": false,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "a AI VIET NAM. Quy trình triển khai chi tiết sẽ\nđi qua các bước: thiết lập môi trường làm việc và tổ chức cấu trúc dự án, thu thập và xử lý dữ\nliệu, x..."
+      }
+    ]
+  },
+  {
+    "question_id": "q14",
+    "split": "dev",
+    "question": "Vai trò của thành phần VectorStore trong framework LangChain là gì?",
+    "gold_page": [
+      19
+    ],
+    "filter": null,
+    "hit_at_1": true,
+    "hit_at_3": true,
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "aio2025-tutorial-rag_p19_a00",
+        "page": 19,
+        "section": "gioi_thieu_langchain",
+        "score": 0.8205423466304417,
+        "page_match": true,
+        "evidence_match": true,
+        "is_hit": true,
+        "text_preview": "3. Vector Stores\nVectorStore trong LangChain chịu trách nhiệm lưu trữ các đối tượng Document và vector\ntương ứng, đồng thời cung cấp phương thức để tr..."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "aio2025-tutorial-rag_p19_a01",
+        "page": 19,
+        "section": "gioi_thieu_langchain",
+        "score": 0.7754817461029213,
+        "page_match": true,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "FAISS và\nInMemoryVectorStore,đếncáccơsởdữliệuchuyêndụngvới Chroma, Pinecone, Postgres.\n1 from langchain_core.vectorstores import InMemoryVectorStore\n3..."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "aio2025-tutorial-rag_p19_a02",
+        "page": 19,
+        "section": "gioi_thieu_langchain",
+        "score": 0.7656845693690993,
+        "page_match": true,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "liệu. Điểm\nđặc biệt là Retrievers trong LangChain là các Runnable, cho phép chúng kết nối dễ dàng\nvào các chuỗi xử lý hay “chains”.\nVectorStoreRetriev..."
+      }
+    ]
+  },
+  {
+    "question_id": "q15",
+    "split": "dev",
+    "question": "Hiện tượng 'Lost in the Middle' ảnh hưởng như thế nào đến việc xử lý ngữ cảnh của LLM?",
+    "gold_page": [
+      31
+    ],
+    "filter": null,
+    "hit_at_1": false,
+    "hit_at_3": false,
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "aio2025-tutorial-rag_p31_a04",
+        "page": 31,
+        "section": "cau_hoi_trac_nghiem",
+        "score": 0.8337487933078269,
+        "page_match": true,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "n tượng “Lost in the Middle”, chiến lược sắp xếp ngữ cảnh nào sau đây là\ntối ưu nhất trước khi gửi cho LLM?"
+      },
+      {
+        "rank": 2,
+        "chunk_id": "aio2025-tutorial-rag_p12_a02",
+        "page": 12,
+        "section": "retrieval_generation",
+        "score": 0.7980415060090357,
+        "page_match": false,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "hể khiến LLM bị\n“loãng” chủ đề.\n• Context Selection & Compression:\n– Context Reordering: Dựa trên hiện tượng “Lost in the Middle”: LLM thường chú\ný tố..."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "aio2025-tutorial-rag_p12_a01",
+        "page": 12,
+        "section": "retrieval_generation",
+        "score": 0.725667301333655,
+        "page_match": false,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "lời người dùng. Quá trình này không chỉ đơn\ngiản là đưa dữ liệu vào, mà còn đòi hỏi các chiến lược xử lý ngữ cảnh tinh tế.\n1. Context Preparation\n• Co..."
+      }
+    ]
+  },
+  {
+    "question_id": "q16",
+    "split": "test",
+    "question": "Các tác giả tham gia xây dựng Tutorial RAG của AI VIET NAM gồm những ai?",
+    "gold_page": [
+      1
+    ],
+    "filter": null,
+    "hit_at_1": true,
+    "hit_at_3": true,
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "aio2025-tutorial-rag_p1_a00",
+        "page": 1,
+        "section": "dan_nhap",
+        "score": 0.7910084698013775,
+        "page_match": true,
+        "evidence_match": true,
+        "is_hit": true,
+        "text_preview": "Tutorial: RAG\nDương Trường Bình Nguyễn Anh Khôi Trần Đại Nhân\nDương Đình Thắng Đinh Quang Vinh\nI. Dẫn nhập\nSự bùng nổ của các Large Language Models (L..."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "aio2025-tutorial-rag_p21_a01",
+        "page": 21,
+        "section": "thuc_hanh_pipeline",
+        "score": 0.7560366028214084,
+        "page_match": false,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "thống RAG sử dụng ChromaDB và mô hình ngôn ngữ Qwen.\nQuan sát Hình 10, quy trình phần thực hành bắt đầu từ việc xử lý tài liệu đầu vào, sau đó thực\nhi..."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "aio2025-tutorial-rag_p4_a00",
+        "page": 4,
+        "section": "ly_thuyet_co_ban",
+        "score": 0.7284854310097882,
+        "page_match": false,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "II. Cơ sở lý thuyết về RAG\n/inf⌢-circle Nguồn gốc\nKhái niệm RAG lần đầu tiên được đề xuất chính thức trong bài báo khoa học “Retrieval-\nAugmented Gene..."
+      }
+    ]
+  },
+  {
+    "question_id": "q17",
+    "split": "test",
+    "question": "Giới hạn số lượng tokens tối đa mà LLM có thể tiếp nhận và xử lý trong một lần prompt được gọi là gì?",
+    "gold_page": [
+      3
+    ],
+    "filter": null,
+    "hit_at_1": true,
+    "hit_at_3": true,
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "aio2025-tutorial-rag_p3_a01",
+        "page": 3,
+        "section": "thuat_ngu",
+        "score": 0.7532439709637301,
+        "page_match": true,
+        "evidence_match": true,
+        "is_hit": true,
+        "text_preview": "hoặc ví dụ được cung cấp trong prompt mà không cần cập\nnhật tham số.\nVector Embeddings Biểu diễn dữ liệu (text, image) dưới dạng vector số thực trong ..."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "aio2025-tutorial-rag_p13_a01",
+        "page": 13,
+        "section": "retrieval_generation",
+        "score": 0.7400489287366896,
+        "page_match": false,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "LLM chính chỉ cần nhận đoạn ngắn gọn này, giúp trả lời nhanh hơn và giảm\nthiểu hallucination.\n2. Prompt Engineering\nChất lượng câu trả lời phụ thuộc r..."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "aio2025-tutorial-rag_p34_a01",
+        "page": 34,
+        "section": "cau_hoi_trac_nghiem",
+        "score": 0.7289825382303117,
+        "page_match": false,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "và ngăn chặn việc lặp lại thông tin\nđể tối ưu hóa chất lượng Prompt.\n(c) Kiểm tra xem tài liệu có chứa ít nhất 40 từ khóa quan trọng liên quan đến câu..."
+      }
+    ]
+  },
+  {
+    "question_id": "q18",
+    "split": "test",
+    "question": "Trong Phase 2: Retrieval, điều gì sẽ xảy ra nếu bước truy xuất thông tin bị sai hoặc thiếu?",
+    "gold_page": [
+      9
+    ],
+    "filter": {
+      "section": "retrieval_generation"
+    },
+    "hit_at_1": true,
+    "hit_at_3": true,
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "aio2025-tutorial-rag_p9_a00",
+        "page": 9,
+        "section": "retrieval_generation",
+        "score": 0.7911071152665219,
+        "page_match": true,
+        "evidence_match": true,
+        "is_hit": true,
+        "text_preview": "II.2.2. Phase 2: Retrieval\nĐây là thành phần quyết định sự thành bại của hệ thống RAG. Nếu bước này trích xuất thông\ntin sai hoặc thiếu, LLM sẽ không ..."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "aio2025-tutorial-rag_p12_a00",
+        "page": 12,
+        "section": "retrieval_generation",
+        "score": 0.7392224423992009,
+        "page_match": false,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "2. Sau khi qua Cross-Encoder (Re-ranking): (Mô hình đọc hiểu mối quan hệ “không\nnhận được” → “lỗi/spam”)\nA. Rank 1: “Xử lý lỗi email bị rơi vào thư mụ..."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "aio2025-tutorial-rag_p5_a02",
+        "page": 5,
+        "section": "ly_thuyet_co_ban",
+        "score": 0.7261230459031576,
+        "page_match": false,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "g cần quy\ntrình huấn luyện phức tạp.\nII.2. Kiến trúc RAG hiện đại\nMột hệ thống RAG tiêu chuẩn hiện nay thường được mô hình hóa thành một quy trình gồm..."
+      }
+    ]
+  },
+  {
+    "question_id": "q19",
+    "split": "test",
+    "question": "Theo phân tích kịch bản mở rộng, vai trò bộ não của LLM trong hệ thống RAG là gì?",
+    "gold_page": [
+      16
+    ],
+    "filter": null,
+    "hit_at_1": false,
+    "hit_at_3": true,
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "aio2025-tutorial-rag_p15_a00",
+        "page": 15,
+        "section": "phan_tich_vai_tro",
+        "score": 0.7615618576693652,
+        "page_match": false,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "II.3. Mở rộng: Phân tích vai trò của các thành phần\nĐể đánh giá chính xác tầm quan trọng của từng module trong kiến trúc RAG, chúng ta cùng\nphân tích ..."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "aio2025-tutorial-rag_p5_a00",
+        "page": 5,
+        "section": "ly_thuyet_co_ban",
+        "score": 0.7542968815980993,
+        "page_match": false,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "II.1. Sự chuyển dịch sang In-Context RAG\nMặc dù thuật ngữ RAG vẫn được giữ nguyên, tư duy triển khai kỹ thuật này đã thay đổi căn\nbản cùng với sự phát..."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "aio2025-tutorial-rag_p16_a00",
+        "page": 16,
+        "section": "phan_tich_vai_tro",
+        "score": 0.7517393477902408,
+        "page_match": true,
+        "evidence_match": true,
+        "is_hit": true,
+        "text_preview": "Kịch bản 3: Loại bỏ LLM (Large Language Model)\nVai trò LLM: Bộ não Tổng hợp thông tin, suy luận và sinh câu trả lời dựa trên ngữ cảnh\ntruy vấn.\n• Cơ c..."
+      }
+    ]
+  },
+  {
+    "question_id": "q20",
+    "split": "test",
+    "question": "Đường dẫn mặc định persist_dir được thiết lập để lưu trữ database trong phần thực hành là gì?",
+    "gold_page": [
+      26
+    ],
+    "filter": null,
+    "hit_at_1": true,
+    "hit_at_3": true,
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "aio2025-tutorial-rag_p26_a00",
+        "page": 26,
+        "section": "thuc_hanh_pipeline",
+        "score": 0.7002844301358124,
+        "page_match": true,
+        "evidence_match": true,
+        "is_hit": true,
+        "text_preview": "10 persist_dir: str = \"/content/chroma_data\",\n11 ):\n12 self.persist_dir = persist_dir\n13 self.collection_name = collection_name\n15 self.embedding = Hu..."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "aio2025-tutorial-rag_p22_a02",
+        "page": 22,
+        "section": "thuc_hanh_pipeline",
+        "score": 0.6809478819635697,
+        "page_match": false,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "n[\"HF_TOKEN\"] = \"YOUR_HUGGINGFACE_TOKEN\"\n8 # Tạo thư mục cho dữ liệu và mã nguồn\n9 os.makedirs(os.path.join(PROJECT_ROOT, \"data_source\", \"generative_a..."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "aio2025-tutorial-rag_p21_a03",
+        "page": 21,
+        "section": "thuc_hanh_pipeline",
+        "score": 0.6791066999081249,
+        "page_match": false,
+        "evidence_match": false,
+        "is_hit": false,
+        "text_preview": "dự án\nỞ bước đầu tiên, chúng ta thiết lập môi trường làm việc và tổ chức lại cấu trúc thư mục nhằm\nđảm bảo toàn bộ mã nguồn vận hành có hệ thống, dễ m..."
+      }
+    ]
+  }
+]

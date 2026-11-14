@@ -1,47 +1,51 @@
 # Day 06 · Data Ingestion Engineering
 
-**Lab cá nhân** · **4 giờ** · **Dữ liệu tự chọn**
+**Lab cá nhân** · **4 giờ** · **Học viên: Hoàng Ngọc Hiệu - MSSV: 2A202603976 - Lớp: K5-L3B**
 
 Biến tài liệu thành kho tri thức có thể truy xuất cho AI agent, rồi đo xem cách chuẩn bị dữ liệu nào hiệu quả nhất.
 
 | 📄 Dữ liệu | 🧩 Chiến lược | 🎯 Benchmark |
 |---|---|---|
-| Tối thiểu **30 trang nội dung** | Tối thiểu **3 cấu hình** | Tối thiểu **20 câu hỏi** |
+| **32 trang nội dung hữu ích** (AIO2025 RAG Tutorial) | **3 cấu hình (A, B, C)** | **20 câu hỏi (15 dev / 5 test)** |
 
-## Bắt đầu nhanh
+---
 
-Dùng [starter PostgreSQL + pgvector](starter/README.md) để dựng database và hoàn thiện các hàm TODO, hoặc tự chọn vector store tương đương. Starter chỉ là khung: **bạn tự hiện thực pipeline và benchmark**.
+## Hướng dẫn chạy và tái lập kết quả
 
-## 1. Xây pipeline
+### 1. Yêu cầu môi trường
+- Python 3.11 – 3.13
+- GPU (NVIDIA CUDA) hoặc CPU
+- Cài đặt các thư viện phụ thuộc:
+  ```bash
+  pip install pypdf sentence-transformers qdrant-client torch transformers
+  ```
 
-![Đọc tài liệu, chuẩn hóa, chia chunk, tạo vector, lưu và kiểm tra](assets/ingestion-pipeline.svg)
+### 2. Thực thi toàn bộ pipeline
+Chạy trực tiếp từ thư mục gốc hoặc thư mục `starter/`:
+```bash
+# Cách 1: Từ thư mục gốc
+python -m starter.src.run
 
-Chọn tài liệu được phép sử dụng; giữ **ID tài liệu, nguồn, trang/vị trí** và metadata phù hợp. Dùng embedding model thật qua API hoặc chạy local; lưu và truy xuất bằng pgvector, Qdrant, Chroma hoặc một store tương đương.
+# Cách 2: Từ thư mục starter/
+cd starter
+python -m src.run
+```
 
-## 2. So sánh và đánh giá
+Lệnh này sẽ tự động:
+1. Đọc và chuẩn hóa dữ liệu từ [data/AIO2025_Tutorial_RAG.pdf](data/AIO2025_Tutorial_RAG.pdf) (32 trang nội dung).
+2. Phân chia chunk cho Chiến lược A (Fixed 500/50) và Chiến lược B (Paragraph-based max 700).
+3. Tạo vector embeddings với mô hình `google/embeddinggemma-2` (768 chiều).
+4. Lưu trữ vào vector store cục bộ Qdrant Embedded tại `starter/results/qdrant_db/` (hỗ trợ kiểm tra idempotence không nhân bản).
+5. Thực thi bộ benchmark 20 câu hỏi ([benchmark/questions.json](benchmark/questions.json)) qua 3 cấu hình A, B, C.
+6. Tính toán Hit@1, Evidence Hit@3, xuất toàn bộ traces top-3 và cập nhật [artifacts/experiment_log.csv](artifacts/experiment_log.csv).
 
-![Ba chiến lược được đánh giá trên cùng corpus và benchmark dev/test](assets/benchmark-workflow.svg)
+---
 
-Dùng cùng dữ liệu, model và câu hỏi cho cả ba cấu hình. Tách **15 câu dev / 5 câu test** trước khi chạy; chọn cấu hình trên dev, rồi đánh giá test sau khi cố định. Mỗi câu hỏi cần có đoạn bằng chứng và trang nguồn; thiết kế bộ câu hỏi và đánh giá theo [BENCHMARK.md](BENCHMARK.md).
-
-Đánh giá theo năm khía cạnh: **độ chính xác truy xuất**, **tính mạch lạc của chunk**, **tính hữu dụng của metadata**, **chất lượng grounding** và **tác động của chiến lược dữ liệu**. Giải thích lựa chọn bằng kết quả, ví dụ lỗi và các đánh đổi.
-
-## 3. Chuẩn bị bài nộp
-
-1. Chạy pipeline và lưu cấu hình, kết quả top-3, trace cùng nhãn đánh giá thủ công.
-2. Điền [thông tin học viên](STUDENT.md), [nhật ký thí nghiệm](artifacts/experiment_log.csv) và bản sao [mẫu báo cáo cá nhân](report/individual/MSSV_HoTen.md).
-3. Kiểm tra mã nguồn, cách chạy, manifest dữ liệu và checklist trong [SUBMISSION.md](SUBMISSION.md).
-
-## Tài liệu hướng dẫn
-
-| Bạn cần tìm | Tài liệu |
-|---|---|
-| Setup baseline PostgreSQL + pgvector | [starter/README.md](starter/README.md) |
-| Các bước làm và cách tính chỉ số | [GUIDE.md](GUIDE.md) |
-| Tiến độ trong 4 giờ | [CHECKPOINTS.md](CHECKPOINTS.md) |
-| Năm tiêu chí benchmark và bộ câu hỏi | [BENCHMARK.md](BENCHMARK.md) |
-| Tiêu chí chấm điểm | [RUBRIC.md](RUBRIC.md) |
-| Quy tắc sử dụng dữ liệu, AI và API | [RULES.md](RULES.md) |
-| Cách nộp bài | [SUBMISSION.md](SUBMISSION.md) |
-
-[data/format-example.json](data/format-example.json) chỉ minh họa định dạng, không phải corpus đủ điều kiện. Phần xử lý và benchmark do bạn tự hiện thực; không bắt buộc xây chatbot.
+## Cấu trúc bài nộp
+- `STUDENT.md`: Thông tin học viên Hoàng Ngọc Hiệu (MSSV: 2A202603976, Lớp: K5-L3B).
+- `data/manifest.json`: Manifest chi tiết về corpus, số trang vật lý (35), số trang nội dung (32), quy tắc tính trang và quyền sử dụng.
+- `benchmark/questions.json`: Bộ 20 câu hỏi benchmark kèm evidence quote đã kiểm chứng (15 dev / 5 test, 3 câu có metadata filter).
+- `starter/src/` & `src/`: Mã nguồn pipeline gồm `ingestion.py`, `chunking.py`, `embeddings.py`, `store.py`, `evaluation.py`, `run.py`.
+- `starter/results/` & `results/`: Traces top-3 của các chiến lược A, B, C, tóm tắt benchmark và nhãn audit thủ công.
+- `artifacts/experiment_log.csv`: Bảng ghi nhật ký thí nghiệm chi tiết.
+- `report/individual/2A202603976_HoangNgocHieu.md` & `report/individual/MSSV_HoTen.md`: Báo cáo chi tiết theo 5 khía cạnh đánh giá.
